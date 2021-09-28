@@ -1,0 +1,25 @@
+It should be reflected power, not reverse power, 
+RF powder is coupled to the target capacitively.  If there is an impedance mismatch, then the power applied (say 100 watts) will not be fully coupled with the target, and there will be reflected power which you see as 20 watts in your case.
+In other words this is known as max power transfer theorem, which is taught in electronics.
+For a good coupling of power to the target the reflected power should be zero watts. Sometime in some systems, due to some mismatch there is some problem or the other, and you see some reflected power.
+Be careful if you see a much larger value for the reflected power (say > 25 watts, or it keeps on increasing), for an applied forward power of 100 watts, it is not good for the system (power generator) to see a large value of reflected power.
+In you rf system if your have the tuning and coupling knobs, then you should properly adjust them for achieving good impedance matching, so that you see a minimum of reflected power (say zero watts). Which means all the forward power of 100 watts which you have applied is efficiently transferred to the target.
+K. Sreenivas
+
+
+https://www.researchgate.net/post/In_Rf_sputtering_what_is_mean_by_Reverse_Power_RP
+
+Medição quando ocorreu o erro de Reverse Power Level too High:
+***
+Buscando RF PowerLevels...
+Leitura...
+Status: 0
+Response Data[1...4]: 0XDA 0XFF 0 0
+Response Data[5...7]: 0 0 0
+forward RF PowerLevel: 0XFF 0XDA =  65498 0.1dBm | 6549.800000 dBm
+Leitura...
+Status: 0
+Response Data[1...4]: 0X72 0XFF 0 0
+Response Data[5...7]: 0 0 0
+reverse RF PowerLevel: 0XFF 0X72 =  65394 0.1dBm | 6539.400000 dBm
+****
